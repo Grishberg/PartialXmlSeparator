@@ -1,0 +1,57 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<BorderPane styleClass="root" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="xml_separator.Controller">
+    <center>
+        <GridPane>
+            <children>
+                <!-- Панель ввода сырой разметки с bind -->
+                <TextArea fx:id="taInput"
+                          GridPane.columnIndex="0"
+                          GridPane.columnSpan="1"
+                          GridPane.hgrow="ALWAYS"
+                          GridPane.rowIndex="0"
+                          GridPane.vgrow="ALWAYS">
+                </TextArea>
+
+
+                <!-- панель вывода отфильтрованной разметки без bind -->
+                <TextArea fx:id="taOutput"
+                          GridPane.columnIndex="1"
+                          GridPane.columnSpan="1"
+                          GridPane.hgrow="ALWAYS"
+                          GridPane.rowIndex="0"
+                          GridPane.vgrow="ALWAYS">
+                </TextArea>
+
+                <Button fx:id="btnFilter"
+                        onAction="#onFilterClicked"
+                        text="filter"
+                        GridPane.columnIndex="0"
+                        GridPane.rowIndex="1">
+                </Button>
+
+                <Button fx:id="btnRestore"
+                        onAction="#onRestoreClicked"
+                        text="restore"
+                        GridPane.columnIndex="1"
+                        GridPane.rowIndex="1">
+                </Button>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </center>
+</BorderPane>
